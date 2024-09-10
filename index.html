@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="runeCalc">
+    <form id="runeCalcForm">
+      <label for="rc_date">Дата вашего рождения</label>
+      <input type="date" name="rc_date" id="rc_date" required>
+      <label for="rc_familiya">Фамилия</label>
+      <input type="text" placeholder="Иванов" name="rc_familiya" id="rc_familiya" required>
+      <label for="rc_imya">Имя</label>
+      <input type="text" placeholder="Иван" name="rc_imya" id="rc_imya" required>
+      <label for="rc_otchestvo">Отчество (заполняется при наличии)</label>
+      <input type="text" placeholder="Иванович" name="rc_otchestvo" id="rc_otchestvo">
+      <button type="submit">Рассчитать</button>
+    </form>
+    <div id="runeCalcResult">
+      <div class="spoiler">
+        <div class="spoiler__intro">
+          <h4>Общее описание</h4>
+          <div class="spoiler__btn"></div>
+        </div>
+        <div class="spoiler__content">
+          <h5>* Руна Судьбы</h5>
+          <p>Это та&nbsp;кар­ма, ко­торую каж­дый при­нёс из&nbsp;прош­ло­го воп­ло­щения. Скоп­ленный
+            и&nbsp;сох­ра­нённый опыт; это&nbsp;то, что че­ловек дос­тиг, дос­тиг сам про­жива­ни­ем сво­ей судь­бы
+            во&nbsp;всех пре­дыду­щих сво­их рож­де­ни­ях. Это&nbsp;то, что ре­аль­но при­над­ле­жит ему по&nbsp;пра­ву.
+            Ру­на Судь­бы не&nbsp;име­ет ни­како­го от­но­шения к&nbsp;ро­ду и&nbsp;семье, это толь­ко лич­ное&nbsp;—
+            то,
+            что уже бы­ло на­рабо­тано.</p>
+          <p>Ру­на Судь­бы&nbsp;— это дан­ность, из­ме­нить ко­торую не&nbsp;да­но ни­кому. Нор­ны ткут один раз.</p>
+          <h5>* * Руна Личности</h5>
+          <p>Ос­но­ва Ру­ны Лич­ности&nbsp;— это со­ци­аль­ное имя, ко­торое в&nbsp;нас­то­ящую эпо­ху че­ловек мо­жет
+            ме­нять так, как ему заб­ла­горас­су­дит­ся. Что не­воз­можно бы­ло&nbsp;бы в&nbsp;ста­родав­ние вре­мена,
+            ког­да имя отоб­ра­жало ха­рак­тер че­лове­ка, его бо­гов-пок­ро­вите­лей и, ко­неч­но&nbsp;же,
+            кровь&nbsp;—
+            при­над­лежность к&nbsp;ка­кому-то ро­ду-пле­мени. Иног­да в&nbsp;име­ни ко­диро­валась
+            и&nbsp;при­над­лежность к&nbsp;мес­ту, что в&nbsp;мис­ти­ке имя­наре­чения то­же не&nbsp;яв­ля­ет­ся
+            слу­чайным фак­то­ром.</p>
+          <p>Те­перь&nbsp;же со­ци­аль­ное имя из­менчи­во и&nbsp;пе­ремен­чи­во&nbsp;и, как следс­твие (а&nbsp;мо­жет
+            быть, не&nbsp;следс­твие, а&nbsp;на­обо­рот&nbsp;— прог­рам­мная при­чина), из­менчи­вой
+            и&nbsp;пе­ремен­чи­вой ста­новит­ся и&nbsp;Ру­на Лич­ности. Пом­ня, что эта ру­на отоб­ра­жа­ет&nbsp;ТЗ
+            че­лове­ка на&nbsp;дан­ное воп­ло­щение, отоб­ра­жа­ет не­кие лич­нос­тные ка­чес­тва, ко­торые
+            не­об­хо­димо
+            на­рабо­тать или при­об­рести, ви­дим, что в&nbsp;нас­то­ящую эпо­ху у&nbsp;че­лове­ка есть та­кое
+            пра­во&nbsp;— ме­нять своё ТЗ, пе­реп­рограм­ми­ровать свою судь­бу как отоб­ра­жа­емый сце­нарий
+            жиз­ненно­го пу­ти. У&nbsp;че­лове­ка есть пра­во ина­че рас­ста­вить ак­центы лич­ности, про­явить или
+            спря­тать свою на­туру&nbsp;и, как следс­твие, ре­али­зовать­ся в&nbsp;сов­сем иных ре­зуль­та­тах. Но,
+            под­чер­кну, всё это ему дос­тупно толь­ко в&nbsp;ми­ре лю­дей, толь­ко в&nbsp;прос­транс­тве
+            со­ци­аль­ных
+            игр. В&nbsp;ан­на­лах «Кни­ги Су­деб», в&nbsp;узо­рах по­лот­на Норн его ли­ния не­из­менна, а&nbsp;сме­на
+            лич­ности&nbsp;— это не&nbsp;сме­на узо­ра на&nbsp;по­лот­не ре­аль­нос­ти, а&nbsp;прос­то ок­ра­шива­ние
+            это­го узо­ра в&nbsp;иные от­тенки.</p>
+          <h5>* * * Золотая Руна</h5>
+          <p>Ито­говая ру­на ре­зуль­та­та. Опи­сыва­ет тот след, тот от­пе­чаток ва­шего соз­на­ния, ва­шей лич­ности
+            и&nbsp;жиз­ни, ко­торый ожи­да­ем от&nbsp;вас в&nbsp;дан­ной ре­аль­нос­ти. Это&nbsp;то, что де­ла­ет­ся
+            не&nbsp;для се­бя, а&nbsp;то, что ос­та­нет­ся пос­ле вас. Как до­каза­тель­ство, что прог­рамма судь­бы
+            бы­ла
+            по­нята и&nbsp;от­ра­бота­на пол­но и&nbsp;с&nbsp;ожи­да­емым ре­зуль­та­том, что при­род­ные да­ры (или
+            их&nbsp;от­сутс­твие) наш­ли вер­ное при­мене­ние,&nbsp;— и&nbsp;это пра­виль­но.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+  #runeCalc {
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    input {
+      overflow: visible;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+
+    textarea {
+      overflow: auto;
+    }
+
+    [type="checkbox"],
+    [type="radio"] {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+  }
+
+  #runeCalc {
+    border: 1px solid #000;
+    padding: 2rem 1.5rem;
+  }
+
+  #runeCalcForm {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    input {
+      margin-bottom: 1rem;
+    }
+
+    input,
+    button {
+      padding: .5rem;
+    }
+  }
+
+  #runeCalcResult {
+    .spoiler {
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .spoiler:not(:last-child) {
+      border-bottom: 1px solid;
+    }
+
+    .spoiler__intro {
+      position: relative;
+      cursor: pointer;
+      padding-bottom: .5rem;
+      display: flex;
+      gap: 1rem;
+      /* justify-content: space-between; */
+      align-items: center;
+    }
+
+    .spoiler__intro>* {
+      margin: 0;
+    }
+
+    .spoiler .spoiler__btn {
+      position: relative;
+      width: 10px;
+      height: 10px;
+    }
+
+    .spoiler .spoiler__btn:before,
+    .spoiler .spoiler__btn:after {
+      content: "";
+      position: absolute;
+      background-color: #000;
+      transition: transform 0.25s ease-out;
+    }
+
+    .spoiler .spoiler__btn:before {
+      /* top: 1px; */
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      margin-left: -1px;
+    }
+
+    .spoiler .spoiler__btn:after {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      margin-top: -1px;
+    }
+
+    .spoiler__content {
+      max-height: 0;
+      overflow: hidden;
+      will-change: max-height;
+      transition: all 0.25s ease-out;
+      opacity: 0;
+    }
+
+    .spoiler__active .spoiler__content {
+      opacity: 1;
+    }
+
+    .spoiler__active .spoiler__intro .spoiler__btn:before {
+      transform: rotate(90deg);
+    }
+
+    .spoiler__active .spoiler__intro .spoiler__btn:after {
+      transform: rotate(180deg);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const rcForm = document.querySelector('#runeCalcForm');
+
+    rcForm.addEventListener('submit', () => {
+      event.preventDefault();
+
+      const birthDate = rcForm.querySelector('#rc_date').value;
+      const name = rcForm.querySelector('#rc_imya').value;
+      const surname = rcForm.querySelector('#rc_familiya').value;
+      const patronymic = rcForm.querySelector('#rc_otchestvo').value;
+
+      function isCyrillic(input) {
+        const cyrillicPattern = /^[А-ЯЁа-яё]+$/;
+        return cyrillicPattern.test(input);
+      }
+
+      // if (!isCyrillic(name) || !isCyrillic(surname) || (patronymic && !isCyrillic(patronymic))) {
+      //   alert("Пожалуйста, вводите только кириллические символы.");
+      //   return false; // Предотвращаем отправку формы
+      // }
+
+      // получаем суммы цифр в числе
+      function getDigitSum(num) {
+        num = num.toString().replace(/\D/g, '');
+        while (num > 9) {
+          num = num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+        }
+        return num
+      }
+      // console.log(getDigitSum('1991-04-29'));
+
+      // пре­об­ра­зу­ем де­сятич­ный код в тро­ич­ный код
+      function getTernaryValue(num) {
+        num = getDigitSum(num);
+        if (num == 1 || num == 4 || num == 7) {
+          return 1
+        } else if (num == 2 || num == 5 || num == 8) {
+          return 2
+        }
+        else if (num == 3 || num == 6 || num == 9) {
+          return 3
+        }
+      }
+      // console.log(getTernaryValue(46));
+
+      // Руна Сущности
+      function getEssenceRune() {
+        // определяем руническую группу (1-8 или 1-9 ???)
+        const runeGroup = getDigitSum(birthDate);
+        // console.log(`Руническая группа: ${runeGroup}`);
+        // определяем этт (1-3)
+        const [year, month, day] = birthDate.split('-');
+        const dayNumber = getTernaryValue(day);
+        const monthNumber = getTernaryValue(month);
+        const yearNumber = getTernaryValue(year);
+        // console.log(year);
+        // console.log(dayNumber, monthNumber, yearNumber);
+        return {
+          'runeGroup': runeGroup,
+          'att': null
+        }
+      }
+      console.log(`Руна Сущности:`);
+      console.log(getEssenceRune());
+
+
+      // Руна Личности
+      function getPersonalityRune() {
+        const letterValues = {
+          'А': 1, 'И': 1, 'С': 1, 'Ъ': 1,
+          'Б': 2, 'Й': 2, 'Т': 2, 'Ы': 2,
+          'В': 3, 'К': 3, 'У': 3, 'Ь': 3,
+          'Г': 4, 'Л': 4, 'Ф': 4, 'Э': 4,
+          'Д': 5, 'М': 5, 'Х': 5, 'Ю': 5,
+          'Е': 6, 'Н': 6, 'Ц': 6, 'Я': 6,
+          'Ё': 7, 'О': 7, 'Ч': 7,
+          'Ж': 8, 'П': 8, 'Ш': 8,
+          'З': 9, 'Р': 9, 'Щ': 9
+        };
+        function getNameNumber(name) {
+          const upperName = name.toUpperCase().replace(/\s+/g, '');
+          let sum = 0;
+          for (const letter of upperName) {
+            if (letterValues[letter]) {
+              sum += letterValues[letter];
+            }
+          }
+          sum = getDigitSum(sum);
+          return sum;
+        }
+        function getPersonalityNumber(names) {
+          sum = 0;
+          names.forEach(name => {
+            sum += getNameNumber(name);
+          });
+          return getDigitSum(sum);
+        }
+        return {
+          'runeGroup': getPersonalityNumber([name, surname, patronymic]),
+          'att': null
+        }
+      }
+      console.log(`Руна Личности:`);
+      console.log(getPersonalityRune());
+
+
+
+
+    })
+  })
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // spoiler
+    const accordions = document.querySelectorAll(".spoiler");
+    const openAccordion = (accordion) => {
+      const content = accordion.querySelector(".spoiler__content");
+      accordion.classList.add("spoiler__active");
+      content.style.maxHeight = content.scrollHeight + "px";
+    };
+    const closeAccordion = (accordion) => {
+      const content = accordion.querySelector(".spoiler__content");
+      accordion.classList.remove("spoiler__active");
+      content.style.maxHeight = null;
+    };
+    accordions.forEach((accordion) => {
+      const intro = accordion.querySelector(".spoiler__intro");
+      const content = accordion.querySelector(".spoiler__content");
+      intro.onclick = () => {
+        if (content.style.maxHeight) {
+          closeAccordion(accordion);
+        } else {
+          accordions.forEach((accordion) => closeAccordion(accordion));
+          openAccordion(accordion);
+        }
+      };
+    });
+  })
+</script>
+
+</html>
