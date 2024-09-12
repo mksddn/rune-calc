@@ -10,6 +10,11 @@
 <body>
   <div id="runeCalc">
     <form id="runeCalcForm">
+      <label for="rc_language">Язык расчетов:</label>
+      <select id="rc_language" name="rc_language">
+        <option value="ru">Русский (RU)</option>
+        <option value="en">English (EN)</option>
+      </select>
       <label for="rc_date">Дата вашего рождения</label>
       <input type="date" name="rc_date" id="rc_date" required>
       <label for="rc_familiya">Фамилия</label>
@@ -111,14 +116,6 @@
       -webkit-appearance: button;
     }
 
-    button::-moz-focus-inner,
-    [type="button"]::-moz-focus-inner,
-    [type="reset"]::-moz-focus-inner,
-    [type="submit"]::-moz-focus-inner {
-      border-style: none;
-      padding: 0;
-    }
-
     button:-moz-focusring,
     [type="button"]:-moz-focusring,
     [type="reset"]:-moz-focusring,
@@ -154,12 +151,14 @@
     flex-direction: column;
     gap: .5rem;
 
-    input {
+    input,
+    select {
       margin-bottom: 1rem;
     }
 
     input,
-    button {
+    button,
+    select {
       padding: .5rem;
     }
   }
@@ -247,20 +246,37 @@
     rcForm.addEventListener('submit', () => {
       event.preventDefault();
 
+      const language = rcForm.querySelector('#rc_language').value;
       const name = rcForm.querySelector('#rc_imya').value;
       const surname = rcForm.querySelector('#rc_familiya').value;
       const patronymic = rcForm.querySelector('#rc_otchestvo').value;
       const birthDate = rcForm.querySelector('#rc_date').value;
       const [birthYear, birthMonth, birthDay] = birthDate.split('-');
 
+      // Функция для проверки текста на кириллицу
       function isCyrillic(input) {
-        const cyrillicPattern = /^[А-ЯЁа-яё]+$/;
+        const cyrillicPattern = /^[А-ЯЁа-яё\s]+$/;
         return cyrillicPattern.test(input);
       }
 
-      if (!isCyrillic(name) || !isCyrillic(surname) || (patronymic && !isCyrillic(patronymic))) {
-        alert("Пожалуйста, вводите только кириллические символы.");
-        return false; // Предотвращаем отправку формы
+      // Функция для проверки текста на латиницу
+      function isLatin(input) {
+        const latinPattern = /^[A-Za-z\s]+$/;
+        return latinPattern.test(input);
+      }
+
+      if (language === "ru") {
+        // Если выбран русский язык, проверяем, что введен только текст на кириллице
+        if (!isCyrillic(name) || !isCyrillic(surname)) {
+          alert("Пожалуйста, вводите имя и фамилию на кириллице.");
+          return false;
+        }
+      } else if (language === "en") {
+        // Если выбран английский язык, проверяем, что введен только текст на латинице
+        if (!isLatin(name) || !isLatin(surname)) {
+          alert("Please enter your first and last name in Latin characters.");
+          return false;
+        }
       }
 
       // получаем суммы цифр в числе
