@@ -22,7 +22,7 @@
     </form>
     <div id="runeCalcResult">
       <div id="runeCalcResultRunes" style="display: none;">
-<hr>
+        <hr>
         <div class="spoiler">
           <div class="spoiler__intro">
             <h4>Общее описание</h4>
@@ -32,7 +32,8 @@
             <h5>* Руна Судьбы</h5>
             <p>Это та&nbsp;кар­ма, ко­торую каж­дый при­нёс из&nbsp;прош­ло­го воп­ло­щения. Скоп­ленный
               и&nbsp;сох­ра­нённый опыт; это&nbsp;то, что че­ловек дос­тиг, дос­тиг сам про­жива­ни­ем сво­ей судь­бы
-              во&nbsp;всех пре­дыду­щих сво­их рож­де­ни­ях. Это&nbsp;то, что ре­аль­но при­над­ле­жит ему по&nbsp;пра­ву.
+              во&nbsp;всех пре­дыду­щих сво­их рож­де­ни­ях. Это&nbsp;то, что ре­аль­но при­над­ле­жит ему
+              по&nbsp;пра­ву.
               Ру­на Судь­бы не&nbsp;име­ет ни­како­го от­но­шения к&nbsp;ро­ду и&nbsp;семье, это толь­ко лич­ное&nbsp;—
               то,
               что уже бы­ло на­рабо­тано.</p>
@@ -60,7 +61,8 @@
               лич­ности&nbsp;— это не&nbsp;сме­на узо­ра на&nbsp;по­лот­не ре­аль­нос­ти, а&nbsp;прос­то ок­ра­шива­ние
               это­го узо­ра в&nbsp;иные от­тенки.</p>
             <h5>* * * Золотая Руна</h5>
-            <p>Ито­говая ру­на ре­зуль­та­та. Опи­сыва­ет тот след, тот от­пе­чаток ва­шего соз­на­ния, ва­шей лич­ности
+            <p>Ито­говая ру­на ре­зуль­та­та. Опи­сыва­ет тот след, тот от­пе­чаток ва­шего соз­на­ния, ва­шей
+              лич­ности
               и&nbsp;жиз­ни, ко­торый ожи­да­ем от&nbsp;вас в&nbsp;дан­ной ре­аль­нос­ти. Это&nbsp;то, что де­ла­ет­ся
               не&nbsp;для се­бя, а&nbsp;то, что ос­та­нет­ся пос­ле вас. Как до­каза­тель­ство, что прог­рамма судь­бы
               бы­ла
@@ -347,7 +349,7 @@
         }
         return {
           'group': getPersonalityNumber([name, surname, patronymic]),
-          'att': checkMatch(name, surname, patronymic) || getTernaryValue(getDigitSum(birthDate)),
+          'att': checkMatch(getTernaryValue(getPersonalityNumber([name])), getTernaryValue(getPersonalityNumber([surname])), getTernaryValue(getPersonalityNumber([patronymic]))) || getTernaryValue(getPersonalityNumber([name, surname, patronymic])),
           'nameNumber': getNameNumber(name),
           'surnameNumber': getNameNumber(surname),
           'patronymicNumber': getNameNumber(patronymic)
