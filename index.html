@@ -278,6 +278,89 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+
+    const runes = [
+      {
+        group: 1,
+        atts: [
+          { rus: "Феху", eng: "Fehu", img: "https://example.com/images/fehu.png" },
+          { rus: "Хагалаз", eng: "Hagalaz", img: "https://example.com/images/Hagalaz.png" },
+          { rus: "Тейваз", eng: "Teiwaz", img: "https://example.com/images/Teiwaz.png" }
+        ]
+      },
+      {
+        group: 2,
+        atts: [
+          { rus: "Уруз", eng: "Uruz", img: "https://example.com/images/Uruz.png" },
+          { rus: "Наутиз", eng: "Nauthiz", img: "https://example.com/images/Nauthiz.png" },
+          { rus: "Беркана", eng: "Berkana", img: "https://example.com/images/Berkana.png" }
+        ]
+      },
+      {
+        group: 3,
+        atts: [
+          { rus: "Турисаз", eng: "Thurisaz", img: "https://example.com/images/Thurisaz.png" },
+          { rus: "Иса", eng: "Isa", img: "https://example.com/images/Isa.png" },
+          { rus: "Эваз", eng: "Ehwaz", img: "https://example.com/images/Ehwaz.png" }
+        ]
+      },
+      {
+        group: 4,
+        atts: [
+          { rus: "Ансуз", eng: "Ansuz", img: "https://example.com/images/Ansuz.png" },
+          { rus: "Йера", eng: "Jera", img: "https://example.com/images/Jera.png" },
+          { rus: "Манназ", eng: "Mannaz", img: "https://example.com/images/Mannaz.png" }
+        ]
+      },
+      {
+        group: 5,
+        atts: [
+          { rus: "Райдо", eng: "Raido", img: "https://example.com/images/Raido.png" },
+          { rus: "Эйваз", eng: "Eihwaz", img: "https://example.com/images/Eihwaz.png" },
+          { rus: "Лагуз", eng: "Laguz", img: "https://example.com/images/Laguz.png" }
+        ]
+      },
+      {
+        group: 6,
+        atts: [
+          { rus: "Кеназ", eng: "Kenaz", img: "https://example.com/images/Kenaz.png" },
+          { rus: "Перт", eng: "Perth", img: "https://example.com/images/Perth.png" },
+          { rus: "Ингуз", eng: "Inguz", img: "https://example.com/images/Inguz.png" }
+        ]
+      },
+      {
+        group: 7,
+        atts: [
+          { rus: "Гебо", eng: "Gebo", img: "https://example.com/images/Gebo.png" },
+          { rus: "Альгиз", eng: "Algiz", img: "https://example.com/images/Algiz.png" },
+          { rus: "Отала", eng: "Othala", img: "https://example.com/images/Othala.png" }
+        ]
+      },
+      {
+        group: 8,
+        atts: [
+          { rus: "Вуньо", eng: "Wunjo", img: "https://example.com/images/Wunjo.png" },
+          { rus: "Совило", eng: "Sowulo", img: "https://example.com/images/Sowulo.png" },
+          { rus: "Дагаз", eng: "Dagaz", img: "https://example.com/images/Dagaz.png" }
+        ]
+      }
+    ];
+
+    // Функция для получения руны по номеру группы и этта
+    function getRuneByGroupAndAtt(groupNumber, attNumber) {
+      const groupIndex = groupNumber - 1; // Индекс группы
+      const attIndex = attNumber - 1;     // Индекс этта
+      if (runes[groupIndex] && runes[groupIndex].atts[attIndex]) {
+        return {
+          rune: runes[groupIndex].atts[attIndex], // Руна
+          group: groupNumber,                    // Номер группы
+          att: attNumber                         // Номер этта
+        };
+      } else {
+        return null; // Если такой группы или этта нет, вернем null
+      }
+    }
+
     const rcForm = document.querySelector('#runeCalcForm');
 
     rcForm.addEventListener('submit', () => {
@@ -355,16 +438,19 @@
 
       // РУНА СУЩНОСТИ
       function getEssenceRune() {
+        const group = getDigitSum(birthDate);
+        const att = checkMatch(getTernaryValue(birthDay), getTernaryValue(birthMonth), getTernaryValue(birthYear)) || getTernaryValue(getDigitSum(birthDate));
+        let essenceRune = getRuneByGroupAndAtt(group, att);
+        essenceRune.dayNumber = getDigitSum(birthDay);
+        essenceRune.monthNumber = getDigitSum(birthMonth);
+        essenceRune.yearNumber = getDigitSum(birthYear);
         return {
-          'group': getDigitSum(birthDate),
-          'att': checkMatch(getTernaryValue(birthDay), getTernaryValue(birthMonth), getTernaryValue(birthYear)) || getTernaryValue(getDigitSum(birthDate)),
-          'dayNumber': getDigitSum(birthDay),
-          'monthNumber': getDigitSum(birthMonth),
-          'yearNumber': getDigitSum(birthYear),
+          ...essenceRune
         }
       }
+      const essenceRune = getEssenceRune();
       console.log(`Руна Сущности:`);
-      console.log(getEssenceRune());
+      console.log(essenceRune);
 
 
       // РУНА ЛИЧНОСТИ
@@ -413,39 +499,42 @@
           });
           return getDigitSum(sum);
         }
+        const group = getPersonalityNumber([name, surname, patronymic]);
+        const att = checkMatch(getTernaryValue(getPersonalityNumber([name])), getTernaryValue(getPersonalityNumber([surname])), getTernaryValue(getPersonalityNumber([patronymic]))) || getTernaryValue(getPersonalityNumber([name, surname, patronymic]));
+        let personalityRune = getRuneByGroupAndAtt(group, att);
+        personalityRune.nameNumber = getNameNumber(name);
+        personalityRune.surnameNumber = getNameNumber(surname);
+        personalityRune.patronymicNumber = getNameNumber(patronymic);
         return {
-          'group': getPersonalityNumber([name, surname, patronymic]),
-          'att': checkMatch(getTernaryValue(getPersonalityNumber([name])), getTernaryValue(getPersonalityNumber([surname])), getTernaryValue(getPersonalityNumber([patronymic]))) || getTernaryValue(getPersonalityNumber([name, surname, patronymic])),
-          'nameNumber': getNameNumber(name),
-          'surnameNumber': getNameNumber(surname),
-          'patronymicNumber': getNameNumber(patronymic)
+          ...personalityRune
         }
       }
+      const personalityRune = getPersonalityRune();
       console.log(`Руна Личности:`);
-      console.log(getPersonalityRune());
+      console.log(personalityRune);
 
       // ЗОЛОТАЯ РУНА
       function getGoldenRune() {
-        const essenceRune = getEssenceRune();
-        const personalityRune = getPersonalityRune();
         const dayPlusName = essenceRune.dayNumber + personalityRune.nameNumber;
         const monthPlusPatronymic = essenceRune.monthNumber + personalityRune.patronymicNumber;
         const yearPlusSurname = essenceRune.yearNumber + personalityRune.surnameNumber;
-
+        const group = getDigitSum(essenceRune.group + personalityRune.group);
+        const att = checkMatch(getTernaryValue(dayPlusName), getTernaryValue(monthPlusPatronymic), getTernaryValue(yearPlusSurname)) || getDigitSum(essenceRune.group + personalityRune.group);
+        let goldenRune = getRuneByGroupAndAtt(group, att);
+        goldenRune.dayPlusName = dayPlusName;
+        goldenRune.monthPlusPatronymic = monthPlusPatronymic;
+        goldenRune.yearPlusSurname = yearPlusSurname;
         return {
-          'group': getDigitSum(essenceRune.group + personalityRune.group),
-          'att': checkMatch(getTernaryValue(dayPlusName), getTernaryValue(monthPlusPatronymic), getTernaryValue(yearPlusSurname)) || getDigitSum(essenceRune.group + personalityRune.group),
-          'dayPlusName': dayPlusName,
-          'monthPlusPatronymic': monthPlusPatronymic,
-          'yearPlusSurname': yearPlusSurname
+          ...goldenRune
         }
       }
+      const goldenRune = getGoldenRune();
       console.log(`Золотая Руна:`);
-      console.log(getGoldenRune());
+      console.log(goldenRune);
 
-      document.querySelector('#essenceRune').innerHTML = `Руническая группа: <b>${getEssenceRune().group}</b><br>Атт: <b>${getEssenceRune().att}</b>`;
-      document.querySelector('#personalityRune').innerHTML = `Руническая группа: <b>${getPersonalityRune().group}</b><br>Атт: <b>${getPersonalityRune().att}</b>`;
-      document.querySelector('#goldenRune').innerHTML = `Руническая группа: <b>${getGoldenRune().group}</b><br>Атт: <b>${getGoldenRune().att}</b>`;
+      document.querySelector('#essenceRune').innerHTML = `<h3>${essenceRune.rune.rus} (${essenceRune.rune.eng})</h3>Руническая группа: <b>${essenceRune.group}</b><br>Атт: <b>${essenceRune.att}</b><br><br>`;
+      document.querySelector('#personalityRune').innerHTML = `<h3>${personalityRune.rune.rus} (${personalityRune.rune.eng})</h3>Руническая группа: <b>${personalityRune.group}</b><br>Атт: <b>${personalityRune.att}</b><br><br>`;
+      document.querySelector('#goldenRune').innerHTML = `<h3>${goldenRune.rune.rus} (${goldenRune.rune.eng})</h3>Руническая группа: <b>${goldenRune.group}</b><br>Атт: <b>${goldenRune.att}</b>`;
       document.querySelector('#runeCalcResultRunes').style.display = 'block';
       document.querySelector('#runeCalcAbout').style.display = 'none';
       document.querySelector('#runeCalcResultRunes').scrollIntoView({ behavior: "instant", block: "start" });
