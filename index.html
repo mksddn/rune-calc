@@ -388,6 +388,14 @@
           { rus: "Совило", eng: "Sowulo", img: "https://mk999.one/wp-content/themes/mk999.2021/assets/runes/images/sowulo.png" },
           { rus: "Дагаз", eng: "Dagaz", img: "https://mk999.one/wp-content/themes/mk999.2021/assets/runes/images/dagaz.png" }
         ]
+      },
+      {
+        group: 9,
+        atts: [
+          { rus: "Пустая руна<br>Вирд", eng: "Wyrd", img: "https://i.pinimg.com/originals/bc/2d/b6/bc2db62ff6223138ca04f5f39db168d3.png" },
+          { rus: "Пустая руна<br>Вирд", eng: "Wyrd", img: "https://i.pinimg.com/originals/bc/2d/b6/bc2db62ff6223138ca04f5f39db168d3.png" },
+          { rus: "Пустая руна<br>Вирд", eng: "Wyrd", img: "https://i.pinimg.com/originals/bc/2d/b6/bc2db62ff6223138ca04f5f39db168d3.png" }
+        ]
       }
     ];
 
@@ -482,20 +490,20 @@
       // console.log(checkMatch(1,2,1));
 
       // проверяем на группу 9 (пустая руна)
-      function check9group(group) {
-        if (group === 9) {
-          try {
-            throw new Error("Пустая руна!");
-          } catch (e) {
-            console.error(`${e.name}: ${e.message}`);
-          }
-        }
-      }
+      // function check9group(group) {
+      //   if (group === 9) {
+      //     try {
+      //       throw new Error("Пустая руна!");
+      //     } catch (e) {
+      //       console.error(`${e.name}: ${e.message}`);
+      //     }
+      //   }
+      // }
 
       // РУНА СУЩНОСТИ
       function getEssenceRune() {
         const group = getDigitSum(birthDate);
-        check9group(group);
+        // check9group(group);
         const att = checkMatch(getTernaryValue(birthDay), getTernaryValue(birthMonth), getTernaryValue(birthYear)) || getTernaryValue(getDigitSum(birthDate));
         let essenceRune = getRuneByGroupAndAtt(group, att);
         essenceRune.dayNumber = getDigitSum(birthDay);
@@ -558,7 +566,7 @@
         }
         const group = getPersonalityNumber([name, surname, patronymic]);
         const att = checkMatch(getTernaryValue(getPersonalityNumber([name])), getTernaryValue(getPersonalityNumber([surname])), getTernaryValue(getPersonalityNumber([patronymic]))) || getTernaryValue(getPersonalityNumber([name, surname, patronymic]));
-        check9group(group);
+        // check9group(group);
         let personalityRune = getRuneByGroupAndAtt(group, att);
         personalityRune.nameNumber = getNameNumber(name);
         personalityRune.surnameNumber = getNameNumber(surname);
@@ -578,7 +586,7 @@
         const yearPlusSurname = essenceRune.yearNumber + personalityRune.surnameNumber;
         const group = getDigitSum(essenceRune.group + personalityRune.group);
         const att = checkMatch(getTernaryValue(dayPlusName), getTernaryValue(monthPlusPatronymic), getTernaryValue(yearPlusSurname)) || getTernaryValue(getDigitSum(essenceRune.group + personalityRune.group));
-        check9group(group);
+        // check9group(group);
         let goldenRune = getRuneByGroupAndAtt(group, att);
         goldenRune.dayPlusName = dayPlusName;
         goldenRune.monthPlusPatronymic = monthPlusPatronymic;
