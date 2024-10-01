@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--white-color: #fff;
+	--black-color: #000;
+	--bg-color: #232323;
+	--accent-color: #EB840B;
+	--gray-clor: #4F4F4F;
+	--light-gray-color: #EEEEEE;
+	--body-font-family: 'Open Sans';
+	--heading-font-family: 'Neutral Face';
+}
+
+html,
+body{
+	height: 100%;
+}
