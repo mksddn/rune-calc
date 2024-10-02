@@ -19,3 +19,55 @@ html,
 body{
 	height: 100%;
 }
+
+body{
+	background-color: var(--bg-color);
+	font-family: var(--body-font-family), sans-serif;
+	font-size: 27px;
+	line-height: auto;
+	font-weight: 300;
+	min-width: 320px;
+	overflow-x: hidden;
+	color: var(--white-color);
+}
+
+.container{
+	max-width: 1478px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+	&.no-padding{
+		padding: 0;
+	}
+	@include xl-down{
+		max-width: 1024px;
+	}
+	@include lg-down{
+		max-width: 768px;
+	}
+	@include md-down{
+		max-width: 640px;
+	}
+	@include sm-down{
+		max-width: 100%;
+	}
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.badge{
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	border: 1px solid var(--white-color);
+	padding: 6.5px 50px;
+	border-radius: 100px;
+	font-weight: normal;
+}
+
+.relative{
+	position: relative;
+}
