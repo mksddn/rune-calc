@@ -5,6 +5,7 @@
 }
 
 :root{
+	--index: calc(1vw + 1vh);
 	--white-color: #fff;
 	--black-color: #000;
 	--bg-color: #232323;
@@ -23,12 +24,17 @@ body{
 body{
 	background-color: var(--bg-color);
 	font-family: var(--body-font-family), sans-serif;
-	font-size: 27px;
+	@include xl-up{
+		font-size: 27px;
+	}
 	line-height: auto;
 	font-weight: 300;
 	min-width: 320px;
 	overflow-x: hidden;
 	color: var(--white-color);
+	@include sm-down{
+		font-size: 10px;
+	}
 }
 
 .container{
@@ -59,13 +65,26 @@ img{
 }
 
 .badge{
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 1;
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
 	border: 1px solid var(--white-color);
-	padding: 6.5px 50px;
 	border-radius: 100px;
 	font-weight: normal;
+	padding: 0 16px;
+	min-width: calc(var(--index) * 3);
+	height: calc(var(--index) * 2);
+	@include xl-up{
+		min-width: 265px;
+		height: 52px;
+	}
+	@include sm-down{
+		font-size: 8px;
+	}
 }
 
 .relative{

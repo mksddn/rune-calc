@@ -1,7 +1,13 @@
 .rune-header{
-	padding: 60px 0 40px 0;
+	padding: calc(var(--index) * 2.2) 0;
+	@include xl-up{
+		padding: 60px 0 40px 0;
+	}
 	.badge{
-		margin-bottom: 30px;
+		margin-bottom: calc(var(--index) * 2);
+		@include xl-up{
+			margin-bottom: 30px;
+		}
 	}
 	h1{
 		font-size: 92px;
@@ -10,13 +16,30 @@
 		font-family: var(--heading-font-family), sans-serif;
 		font-weight: 400;
 		margin-bottom: 50px;
+		display: block;
 		span{
 			display: block;
 			font-size: 80px;
+			@include xl-down{
+				font-size: inherit;
+			}
+			@include sm-down{
+				display: flex;
+				justify-content: end;
+				text-align: right;
+			}
+		}
+		@include xl-down{
+			font-size: calc(var(--index) * 3.62);
+			line-height: 1;
+			margin-bottom: calc(var(--index) * 2.75);
 		}
 	}
 	&-img{
 		margin-bottom: 90px;
+		@include xl-down{
+			margin-bottom: calc(var(--index) * 5);
+		}
 		img{
 			display: block;
 			width: 100%;
@@ -47,5 +70,12 @@
 		border-radius: 100%;
 		background: rgba(255, 255, 255, 0.27);
 		backdrop-filter: blur(16.85px);
+		@include xl-down{
+			width: calc(var(--index) * 8.1);
+			height: calc(var(--index) * 8.1);
+		}
+		@include md-down{
+			font-size: 10px;
+		}
 	}
 }

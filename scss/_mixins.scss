@@ -10,3 +10,6 @@
 @mixin xl-down {
 	@media (max-width: 1280px) { @content; }
 }
+@mixin xl-up {
+	@media (min-width: 1280px) { @content; }
+}
