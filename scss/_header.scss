@@ -1,0 +1,51 @@
+.rune-header{
+	padding: 60px 0 40px 0;
+	.badge{
+		margin-bottom: 30px;
+	}
+	h1{
+		font-size: 92px;
+		text-transform: uppercase;
+		line-height: 80px;
+		font-family: var(--heading-font-family), sans-serif;
+		font-weight: 400;
+		margin-bottom: 50px;
+		span{
+			display: block;
+			font-size: 80px;
+		}
+	}
+	&-img{
+		margin-bottom: 90px;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	p{
+		margin-bottom: 20px;
+	}
+	&-btn{
+		position: absolute;
+		right: 0;
+		bottom: -50px;
+
+		border: none;
+		outline: none;
+
+		color: var(--white-color);
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 0.02em;
+
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 282px;
+		height: 282px;
+		border-radius: 100%;
+		background: rgba(255, 255, 255, 0.27);
+		backdrop-filter: blur(16.85px);
+	}
+}
