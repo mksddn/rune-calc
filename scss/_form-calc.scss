@@ -1,39 +1,3 @@
-input,
-select{
-	color: var(--white-color);
-	font-size: 24px;
-	font-weight: 400;
-	letter-spacing: 0.02em;
-	padding: 36px 40px;
-	background: rgba(238, 238, 238, 0.51);
-	border-radius: 4.1162px;
-	border: none;
-	&::placeholder{
-		color: var(--white-color);
-	}
-}
-input{
-	text-transform: uppercase;
-}
-
-.btn{
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 0.02em;
-	padding: 36px 40px;
-	background-color: var(--gray-color);
-	color: var(--white-color);
-	border-radius: 4.1162px;
-	font-size: 27px;
-	cursor: pointer;
-	border: none;
-	border-radius: 4.1162px;
-	transition: all .25s ease-in-out;
-	&:hover{
-		background-color: var(--accent-color);
-	}
-}
-
 .run-calc-section-bg{
 	position: absolute;
 	width: 100%;
@@ -55,7 +19,7 @@ input{
 	gap: 25px;
 	background: rgba(252, 252, 252, 0.03);
 	.btn{
-		margin: 60px 0 27px 0;
+		margin-top: 60px;
 	}
 	.agree{
 		font-size: 20px;
