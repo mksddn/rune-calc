@@ -11,7 +11,7 @@
   --black-color: #000;
   --bg-color: #232323;
   --accent-color: #EB840B;
-  --gray-clor: #4F4F4F;
+  --gray-color: #4F4F4F;
   --light-gray-color: #EEEEEE;
   --body-font-family: "Open Sans";
   --heading-font-family: "Neutral Face";
@@ -75,6 +75,16 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+section {
+  padding: calc(var(--index) * 2.2) 0;
+  position: relative;
+}
+@media (min-width: 1280px) {
+  section {
+    padding: 40px 0;
+  }
 }
 
 .badge {
@@ -204,9 +214,14 @@ img {
   width: 282px;
   height: 282px;
   border-radius: 100%;
-  background: rgba(255, 255, 255, 0.27);
+  background-color: rgba(255, 255, 255, 0.27);
   -webkit-backdrop-filter: blur(16.85px);
           backdrop-filter: blur(16.85px);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.rune-header-btn:hover {
+  background-color: var(--accent-color);
 }
 @media (max-width: 1280px) {
   .rune-header-btn {
@@ -218,4 +233,113 @@ img {
   .rune-header-btn {
     font-size: 10px;
   }
+}
+
+input,
+select {
+  color: var(--white-color);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding: 36px 40px;
+  background: rgba(238, 238, 238, 0.51);
+  border-radius: 4.1162px;
+  border: none;
+}
+input::-webkit-input-placeholder, select::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+input::-moz-placeholder, select::-moz-placeholder {
+  color: var(--white-color);
+}
+input:-ms-input-placeholder, select:-ms-input-placeholder {
+  color: var(--white-color);
+}
+input::-ms-input-placeholder, select::-ms-input-placeholder {
+  color: var(--white-color);
+}
+input::placeholder,
+select::placeholder {
+  color: var(--white-color);
+}
+
+input {
+  text-transform: uppercase;
+}
+
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 36px 40px;
+  background-color: var(--gray-color);
+  color: var(--white-color);
+  border-radius: 4.1162px;
+  font-size: 27px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4.1162px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+.run-calc-section-bg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.run-calc-form {
+  border: 1.37207px solid var(--white-color);
+  padding: 60px 90px;
+  max-width: 95%;
+  margin: 0 auto;
+  border-radius: 4.1162px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  background: rgba(252, 252, 252, 0.03);
+}
+.run-calc-form .btn {
+  margin: 60px 0 27px 0;
+}
+.run-calc-form .agree {
+  font-size: 20px;
+  font-weight: 300;
+}
+.run-calc-form .agree a {
+  color: var(--white-color);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.run-calc-form .agree a:hover {
+  text-decoration: none;
+}
+
+.run-form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 27px;
+}
+.run-form-group label {
+  text-transform: uppercase;
+  font-family: var(--heading-font-family), sans-serif;
+  line-height: 1;
 }/*# sourceMappingURL=app.css.map */

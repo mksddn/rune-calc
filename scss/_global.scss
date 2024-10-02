@@ -10,7 +10,7 @@
 	--black-color: #000;
 	--bg-color: #232323;
 	--accent-color: #EB840B;
-	--gray-clor: #4F4F4F;
+	--gray-color: #4F4F4F;
 	--light-gray-color: #EEEEEE;
 	--body-font-family: 'Open Sans';
 	--heading-font-family: 'Neutral Face';
@@ -62,6 +62,14 @@ body{
 img{
 	max-width: 100%;
 	height: auto;
+}
+
+section{
+	padding: calc(var(--index) * 2.2) 0;
+	position: relative;
+	@include xl-up{
+		padding: 40px 0;
+	}
 }
 
 .badge{

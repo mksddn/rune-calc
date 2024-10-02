@@ -19,7 +19,7 @@
 			<h1>Онлайн - калькулятор <span>расчета рунокода</span></h1>
 			<div class="rune-header-img relative">
 				<img src="img/header-bg.webp" srcset="img/header-bg@2x.webp 2x" alt="ALT">
-				<a href="javascript:void(0)" class="rune-header-btn">Рассчитать</a>
+				<a href="#runeCalcForm" class="rune-header-btn">Рассчитать</a>
 			</div>
 			<div class="rune-header-text">
 				<p>На калькуляторе можно рассчитать рунокод (индивидуальный рунический код, персональный рунический код) на основных мировых языках. Для расчеты необходимы точные данные: дата рождения: день, месяц, год (время рождения не нужно).</p>
@@ -27,5 +27,45 @@
 			</div>
 		</div>
 	</header>
+
+	<main>
+
+		<section class="run-calc-section" id="runeCalcSection">
+			<img src="img/smoke.png" srcset="img/smoke@2x.png 2x" class="run-calc-section-bg" />
+			<div class="container">
+				<form class="run-calc-form" id="runeCalcForm">
+					<div class="run-form-group">
+						<label for="rc_language">Язык расчетов:</label>
+						<select id="rc_language" name="rc_language">
+							<option value="ru">Русский (RU)</option>
+							<option value="en">English (EN)</option>
+						</select>
+					</div>
+					<div class="run-form-group">
+						<label for="rc_date">Дата вашего рождения</label>
+						<input type="date" name="rc_date" id="rc_date" required>
+					</div>
+					<div class="run-form-group">
+						<label for="rc_familiya">Фамилия</label>
+						<input type="text" placeholder="Иванов" name="rc_familiya" id="rc_familiya" required>
+					</div>
+					<div class="run-form-group">
+						<label for="rc_imya">Имя</label>
+						<input type="text" placeholder="Иван" name="rc_imya" id="rc_imya" required>
+					</div>
+					<div class="run-form-group">
+						<label for="rc_otchestvo">Отчество (заполняется при наличии)</label>
+						<input type="text" placeholder="Иванович" name="rc_otchestvo" id="rc_otchestvo">
+					</div>					
+					<button type="submit" class="btn">Рассчитать</button>
+
+					<span class="agree">Нажимая на кнопку «Рассчитать», Вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с <a href="#">политикой конфиденциальности</a>.</span>
+
+				</form>
+			</div>
+		</section>
+
+	</main>
+
 </body>
 </html>
