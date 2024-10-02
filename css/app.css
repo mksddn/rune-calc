@@ -26,6 +26,7 @@ body {
   font-family: var(--body-font-family), sans-serif;
   font-size: 27px;
   line-height: auto;
+  font-weight: 300;
   min-width: 320px;
   overflow-x: hidden;
   color: var(--white-color);
@@ -40,16 +41,98 @@ body {
 .container.no-padding {
   padding: 0;
 }
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.badge {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--white-color);
+  padding: 6.5px 50px;
+  border-radius: 100px;
+  font-weight: normal;
+}
+
+.relative {
+  position: relative;
+}
 
 .rune-header {
   padding: 60px 0 40px 0;
+}
+.rune-header .badge {
+  margin-bottom: 30px;
 }
 .rune-header h1 {
   font-size: 92px;
   text-transform: uppercase;
   line-height: 80px;
+  font-family: var(--heading-font-family), sans-serif;
+  font-weight: 400;
+  margin-bottom: 50px;
 }
 .rune-header h1 span {
   display: block;
   font-size: 80px;
+}
+.rune-header-img {
+  margin-bottom: 90px;
+}
+.rune-header-img img {
+  display: block;
+  width: 100%;
+}
+.rune-header p {
+  margin-bottom: 20px;
+}
+.rune-header-btn {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  border: none;
+  outline: none;
+  color: var(--white-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 282px;
+  height: 282px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.27);
+  -webkit-backdrop-filter: blur(16.85px);
+          backdrop-filter: blur(16.85px);
 }/*# sourceMappingURL=app.css.map */
