@@ -536,7 +536,7 @@ input {
 }
 @media (max-width: 1024px) {
   .run-calc-section-descr-item {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 640px) {
@@ -633,6 +633,64 @@ input {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+}
+
+.run-calc-section-descr-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .run-calc-section-descr-end {
+    margin: 70px 0 80px;
+  }
+  .run-calc-section-descr-end img {
+    margin-top: 50px;
+  }
+}
+.run-calc-section-descr-end .text-block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+@media (max-width: 768px) {
+  .run-calc-section-descr-end .text-block {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .run-calc-section-descr-end .text-block {
+    font-size: 10px;
+  }
+}
+.run-calc-section-descr-end .text-block p:first-child {
+  max-width: 729px;
+}
+.run-calc-section-descr-end .text-block p:last-child {
+  max-width: 940px;
 }
 
 .circle {
