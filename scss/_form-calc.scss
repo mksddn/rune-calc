@@ -10,20 +10,33 @@
 
 .run-calc-form{
 	border: 1.37207px solid var(--white-color);
-	padding: 60px 90px;
 	max-width: 95%;
 	margin: 0 auto;
 	border-radius: 4.1162px;
 	display: flex;
 	flex-direction: column;
-	gap: 25px;
 	background: rgba(252, 252, 252, 0.03);
+	padding: calc(var(--index) * 2.7) calc(var(--index) * 1.8);
+	gap: calc(var(--index) * 1.35);
+	@include xl-up{
+		gap: 27px;
+		padding: 60px 90px;
+	}
+	@include md-down{
+		max-width: 100%;
+	}
 	.btn{
-		margin-top: 60px;
+		margin-top: calc(var(--index) * 2.2);
+		@include xl-up{
+			margin-top: 60px;
+		}
 	}
 	.agree{
-		font-size: 20px;
 		font-weight: 300;
+		font-size: calc(var(--index) * 0.85);
+		@include xl-up{
+			font-size: 20px;
+		}
 		a{
 			color: var(--white-color);
 			transition: all .25s ease-in-out;
@@ -37,7 +50,10 @@
 .run-form-group{
 	display: flex;
 	flex-direction: column;
-	gap: 27px;
+	gap: calc(var(--index) * 1.2);
+	@include xl-up{
+		gap: 25px;
+	}
 	label{
 		text-transform: uppercase;
 		font-family: var(--heading-font-family), sans-serif;

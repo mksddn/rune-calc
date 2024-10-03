@@ -41,6 +41,9 @@ body {
     font-size: 10px;
   }
 }
+body p {
+  text-align: justify;
+}
 
 .container {
   max-width: 1478px;
@@ -85,6 +88,81 @@ section {
   section {
     padding: 40px 0;
   }
+}
+
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background-color: var(--gray-color);
+  color: var(--white-color);
+  border-radius: 4.1162px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4.1162px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  font-size: calc(var(--index));
+  padding: calc(var(--index) * 1.2);
+}
+.btn:hover {
+  background-color: var(--accent-color);
+}
+@media (min-width: 1280px) {
+  .btn {
+    padding: 36px 40px;
+    font-size: 27px;
+  }
+}
+@media (max-width: 640px) {
+  .btn {
+    font-size: 11px;
+  }
+}
+
+input,
+select {
+  color: var(--white-color);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  background: rgba(238, 238, 238, 0.51);
+  border-radius: 4.1162px;
+  border: none;
+  padding: calc(var(--index) * 1.1) calc(var(--index));
+  font-size: calc(var(--index));
+}
+input::-webkit-input-placeholder, select::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+input::-moz-placeholder, select::-moz-placeholder {
+  color: var(--white-color);
+}
+input:-ms-input-placeholder, select:-ms-input-placeholder {
+  color: var(--white-color);
+}
+input::-ms-input-placeholder, select::-ms-input-placeholder {
+  color: var(--white-color);
+}
+input::placeholder,
+select::placeholder {
+  color: var(--white-color);
+}
+@media (min-width: 1280px) {
+  input,
+  select {
+    font-size: 24px;
+    padding: 36px 40px;
+  }
+}
+@media (max-width: 640px) {
+  input,
+  select {
+    font-size: 10px;
+  }
+}
+
+input {
+  text-transform: uppercase;
 }
 
 .badge {
@@ -149,24 +227,28 @@ section {
   margin-bottom: 50px;
   display: block;
 }
-.rune-header h1 span {
+.rune-header h1 > span {
   display: block;
   font-size: 80px;
 }
 @media (max-width: 1280px) {
-  .rune-header h1 span {
+  .rune-header h1 > span {
     font-size: inherit;
   }
 }
 @media (max-width: 640px) {
-  .rune-header h1 span {
+  .rune-header h1 > span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    text-align: right;
+  }
+  .rune-header h1 > span span {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
   }
 }
 @media (max-width: 1280px) {
@@ -235,57 +317,6 @@ section {
   }
 }
 
-input,
-select {
-  color: var(--white-color);
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  padding: 36px 40px;
-  background: rgba(238, 238, 238, 0.51);
-  border-radius: 4.1162px;
-  border: none;
-}
-input::-webkit-input-placeholder, select::-webkit-input-placeholder {
-  color: var(--white-color);
-}
-input::-moz-placeholder, select::-moz-placeholder {
-  color: var(--white-color);
-}
-input:-ms-input-placeholder, select:-ms-input-placeholder {
-  color: var(--white-color);
-}
-input::-ms-input-placeholder, select::-ms-input-placeholder {
-  color: var(--white-color);
-}
-input::placeholder,
-select::placeholder {
-  color: var(--white-color);
-}
-
-input {
-  text-transform: uppercase;
-}
-
-.btn {
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  padding: 36px 40px;
-  background-color: var(--gray-color);
-  color: var(--white-color);
-  border-radius: 4.1162px;
-  font-size: 27px;
-  cursor: pointer;
-  border: none;
-  border-radius: 4.1162px;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-.btn:hover {
-  background-color: var(--accent-color);
-}
-
 .run-calc-section-bg {
   position: absolute;
   width: 100%;
@@ -298,7 +329,6 @@ input {
 
 .run-calc-form {
   border: 1.37207px solid var(--white-color);
-  padding: 60px 90px;
   max-width: 95%;
   margin: 0 auto;
   border-radius: 4.1162px;
@@ -309,15 +339,37 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 25px;
   background: rgba(252, 252, 252, 0.03);
+  padding: calc(var(--index) * 2.7) calc(var(--index) * 1.8);
+  gap: calc(var(--index) * 1.35);
+}
+@media (min-width: 1280px) {
+  .run-calc-form {
+    gap: 27px;
+    padding: 60px 90px;
+  }
+}
+@media (max-width: 768px) {
+  .run-calc-form {
+    max-width: 100%;
+  }
 }
 .run-calc-form .btn {
-  margin: 60px 0 27px 0;
+  margin-top: calc(var(--index) * 2.2);
+}
+@media (min-width: 1280px) {
+  .run-calc-form .btn {
+    margin-top: 60px;
+  }
 }
 .run-calc-form .agree {
-  font-size: 20px;
   font-weight: 300;
+  font-size: calc(var(--index) * 0.85);
+}
+@media (min-width: 1280px) {
+  .run-calc-form .agree {
+    font-size: 20px;
+  }
 }
 .run-calc-form .agree a {
   color: var(--white-color);
@@ -336,7 +388,12 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 27px;
+  gap: calc(var(--index) * 1.2);
+}
+@media (min-width: 1280px) {
+  .run-form-group {
+    gap: 25px;
+  }
 }
 .run-form-group label {
   text-transform: uppercase;
