@@ -525,6 +525,7 @@ input {
 }
 .run-calc-section-descr-item {
   padding: calc(var(--index) * 1.2) calc(var(--index));
+  position: relative;
 }
 @media (min-width: 1280px) {
   .run-calc-section-descr-item {
@@ -538,9 +539,30 @@ input {
     font-size: 12px;
   }
 }
+@media (max-width: 640px) {
+  .run-calc-section-descr-item {
+    font-size: 10px;
+  }
+}
 @media (max-width: 768px) {
   .run-calc-section-descr-item {
     text-align: center;
+    padding: 0;
+  }
+  .run-calc-section-descr-item:not(:last-child) {
+    padding-bottom: 65px;
+    margin-bottom: 16px;
+  }
+  .run-calc-section-descr-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    height: 48px;
+    width: 1px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .run-calc-section-descr-item p {
     text-align: center;
@@ -565,6 +587,12 @@ input {
   margin-bottom: 20px;
   display: block;
 }
+@media (max-width: 640px) {
+  .run-calc-section-descr-item em {
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+  }
+}
 .run-calc-section-descr-item em::after {
   content: "";
   height: 0.65px;
@@ -580,6 +608,30 @@ input {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     width: 122px;
+  }
+}
+
+.run-calc-section-descr-title {
+  display: none;
+}
+@media (max-width: 768px) {
+  .run-calc-section-descr-title {
+    display: block;
+    text-align: center;
+    padding-bottom: 42px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .run-calc-section-descr-title::after {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 1px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
