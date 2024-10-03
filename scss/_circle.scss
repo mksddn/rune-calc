@@ -1,0 +1,82 @@
+.circle{
+	position: relative;
+	border-radius: 50%;
+	border: 2.45603px solid var(--white-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(var(--index) * 14.2);
+	height: calc(var(--index) * 14.2);
+	z-index: 100;
+	@include xl-up{
+		width: 383px;
+		height: 383px;
+	}
+	&-wrapper{
+		display: flex;
+		justify-content: center;
+	}
+	&-logo{
+		border-radius: 50%;
+		background-color: var(--white-color);
+		width: 58%;
+		height: 58%;
+		img{
+			width: 100%;
+		}
+	}
+	.label {
+		position: absolute;
+		width: fit-content;
+		white-space: nowrap;
+		@include md-down{
+			font-size: 10px;
+		}
+  }
+  
+  .top {
+		top: 0; /* Отступ от верхней границы */
+		left: -45%;
+		@include sm-down{
+			left: -30%;;
+		}
+  }
+  
+  .right {
+		right: -50%; /* Отступ от правой границы */
+		top: 25%;
+		@include sm-down{
+			right: -45%;;
+		}
+  }
+  
+  .bottom {
+		bottom: -20%; /* Отступ от нижней границы */
+		left: 50%;
+		transform: translateX(-50%);
+	}
+  	/* Стили для точек */
+	.dot {
+		position: absolute;
+		width: 7%; /* Диаметр точки */
+		height: 7%; /* Диаметр точки */
+		background-color: white; /* Цвет точки */
+		border-radius: 50%; /* Делаем точки круглыми */
+	}
+
+	.dot-1 {
+		top: 30%;
+		left: 94%;
+	}
+
+	.dot-2 {
+		top: 10%; /* Положение второй точки сверху */
+		left: 12%;
+	}
+
+	.dot-3 {
+		bottom: -4%; /* Положение третьей точки снизу */
+		left: 50%; /* Положение третьей точки слева */
+		transform: translateX(-50%);
+	}
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -87,6 +88,40 @@ section {
 @media (min-width: 1280px) {
   section {
     padding: 40px 0;
+  }
+}
+section h2 {
+  font-family: var(--heading-font-family), sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  font-size: calc(var(--index) * 1.3);
+  margin-bottom: calc(var(--index) * 2.3);
+}
+@media (min-width: 1280px) {
+  section h2 {
+    font-size: 41px;
+    line-height: 50px;
+    margin-bottom: 128px;
+  }
+}
+@media (max-width: 640px) {
+  section h2 {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+}
+section h2 > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+@media (max-width: 640px) {
+  section h2 > span {
+    display: block;
   }
 }
 
@@ -330,7 +365,7 @@ input {
 .run-calc-form {
   border: 1.37207px solid var(--white-color);
   max-width: 95%;
-  margin: 0 auto;
+  margin: 0 auto calc(var(--index) * 1.3);
   border-radius: 4.1162px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -347,12 +382,21 @@ input {
   .run-calc-form {
     gap: 27px;
     padding: 60px 90px;
+    margin-bottom: 80px;
   }
 }
 @media (max-width: 768px) {
   .run-calc-form {
     max-width: 100%;
   }
+}
+@media (max-width: 640px) {
+  .run-calc-form {
+    margin-bottom: 14px;
+  }
+}
+.run-calc-form input {
+  width: 100%;
 }
 .run-calc-form .btn {
   margin-top: calc(var(--index) * 2.2);
@@ -399,4 +443,110 @@ input {
   text-transform: uppercase;
   font-family: var(--heading-font-family), sans-serif;
   line-height: 1;
+}
+
+.run-calc-section-with-img {
+  text-align: center;
+  position: relative;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+}
+
+.circle {
+  position: relative;
+  border-radius: 50%;
+  border: 2.45603px solid var(--white-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(var(--index) * 14.2);
+  height: calc(var(--index) * 14.2);
+  z-index: 100;
+  /* Стили для точек */
+}
+@media (min-width: 1280px) {
+  .circle {
+    width: 383px;
+    height: 383px;
+  }
+}
+.circle-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.circle-logo {
+  border-radius: 50%;
+  background-color: var(--white-color);
+  width: 58%;
+  height: 58%;
+}
+.circle-logo img {
+  width: 100%;
+}
+.circle .label {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .circle .label {
+    font-size: 10px;
+  }
+}
+.circle .top {
+  top: 0; /* Отступ от верхней границы */
+  left: -45%;
+}
+@media (max-width: 640px) {
+  .circle .top {
+    left: -30%;
+  }
+}
+.circle .right {
+  right: -50%; /* Отступ от правой границы */
+  top: 25%;
+}
+@media (max-width: 640px) {
+  .circle .right {
+    right: -45%;
+  }
+}
+.circle .bottom {
+  bottom: -20%; /* Отступ от нижней границы */
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.circle .dot {
+  position: absolute;
+  width: 7%; /* Диаметр точки */
+  height: 7%; /* Диаметр точки */
+  background-color: white; /* Цвет точки */
+  border-radius: 50%; /* Делаем точки круглыми */
+}
+.circle .dot-1 {
+  top: 30%;
+  left: 94%;
+}
+.circle .dot-2 {
+  top: 10%; /* Положение второй точки сверху */
+  left: 12%;
+}
+.circle .dot-3 {
+  bottom: -4%; /* Положение третьей точки снизу */
+  left: 50%; /* Положение третьей точки слева */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }/*# sourceMappingURL=app.css.map */
