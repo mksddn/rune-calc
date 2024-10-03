@@ -1,0 +1,102 @@
+.run-footer{
+	padding: 60px 0;
+	font-size: 20px;
+	position: relative;
+	a{
+		color: var(--white-color);
+	}
+	p:not(:last-child){
+		margin-bottom: 15px;
+	}
+	@include md-down{
+		padding: 24px 0;
+		p{
+			text-align: center;
+			&:not(:last-child){
+				margin-bottom: 5px;
+			}
+		}
+	}
+	@include sm-down{
+		font-size: 13px;
+	}
+	&-wrapper{
+		display: flex;
+		justify-content: space-between;
+		@include md-down{
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+		}
+	}
+	&-logo{
+		margin-bottom: 15px;
+	}
+	&-info{
+		margin-bottom: 20px;
+	}
+	&-email{
+		display: inline-block;
+		margin-bottom: 37px;
+		@include md-down{
+			margin-bottom: 0;
+		}
+	}
+	&-links{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		font-size: 16px;
+		@include md-down{
+			position: absolute;
+			bottom: 24px;
+			width: 100%;
+			left: 0;
+		}
+		@include sm-down{
+			font-size: 10px;
+		}
+	}
+	&-right{
+		text-align: right;
+		padding-top: 115px;
+		@include md-down{
+			padding: 50px 0 70px;
+		}
+	}
+	&-socials{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 30px;
+		@include lg-down{
+			gap: 16px;
+		}
+		&-link{
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid var(--white-color);
+			transition: all .25s ease-in-out;
+			@include lg-down{
+				width: 44px;
+				height: 44px;
+				img{
+					width: 60%;
+				}
+			}
+			img{
+				transition: all .25s ease-in-out;
+			}
+			&:hover{
+				background-color: var(--white-color);
+				img{
+					filter: brightness(0);
+				}
+			}
+		}
+	}
+}
