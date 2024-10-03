@@ -37,6 +37,12 @@ body{
 	}
 	p{
 		text-align: justify;
+		&:not(:last-child){
+			margin-bottom: 20px;
+			@include sm-down{
+				margin-bottom: 15px;
+			}
+		}
 	}
 }
 

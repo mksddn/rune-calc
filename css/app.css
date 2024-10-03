@@ -45,6 +45,14 @@ body {
 body p {
   text-align: justify;
 }
+body p:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  body p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
 
 .container {
   max-width: 1478px;
@@ -305,9 +313,6 @@ input {
   display: block;
   width: 100%;
 }
-.rune-header p {
-  margin-bottom: 20px;
-}
 .rune-header-btn {
   position: absolute;
   right: 0;
@@ -450,6 +455,132 @@ input {
   position: relative;
   -webkit-transform: translateY(-15%);
           transform: translateY(-15%);
+}
+@media (max-width: 768px) {
+  .run-calc-section-with-img {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    margin-top: 17%;
+  }
+}
+
+.run-calc-section-text-block.first-text-block {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+}
+.run-calc-section-text-block.first-text-block p {
+  max-width: 855px;
+}
+@media (max-width: 768px) {
+  .run-calc-section-text-block.first-text-block {
+    position: relative;
+    bottom: auto;
+  }
+}
+.run-calc-section-text-block.last-text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+.run-calc-section-text-block.last-text-block p {
+  max-width: 653px;
+}
+@media (max-width: 768px) {
+  .run-calc-section-text-block.last-text-block {
+    position: relative;
+    top: auto;
+  }
+}
+
+.run-calc-section-descr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: calc(var(--index) * 5.2);
+}
+.run-calc-section-descr > * {
+  border: 1px solid #fff;
+}
+.run-calc-section-descr > *:not(:last-child) {
+  border-right: 0;
+}
+@media (min-width: 1280px) {
+  .run-calc-section-descr {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .run-calc-section-descr {
+    display: block;
+  }
+  .run-calc-section-descr > * {
+    border: none;
+  }
+}
+.run-calc-section-descr-item {
+  padding: calc(var(--index) * 1.2) calc(var(--index));
+}
+@media (min-width: 1280px) {
+  .run-calc-section-descr-item {
+    padding: 50px 20px;
+    font-size: 21px;
+    font-weight: 300;
+  }
+}
+@media (max-width: 1024px) {
+  .run-calc-section-descr-item {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .run-calc-section-descr-item {
+    text-align: center;
+  }
+  .run-calc-section-descr-item p {
+    text-align: center;
+  }
+}
+.run-calc-section-descr-item h3 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-size: calc(var(--index) * 1.1);
+  line-height: 1.2;
+}
+@media (min-width: 1280px) {
+  .run-calc-section-descr-item h3 {
+    font-size: 26px;
+  }
+}
+.run-calc-section-descr-item em {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+.run-calc-section-descr-item em::after {
+  content: "";
+  height: 0.65px;
+  width: 60%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  .run-calc-section-descr-item em::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 122px;
+  }
 }
 
 .circle {
