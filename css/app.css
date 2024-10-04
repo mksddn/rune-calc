@@ -867,6 +867,14 @@ select option {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.runes-item br {
+  display: none;
+}
+@media (max-width: 640px) {
+  .runes-item br {
+    display: block;
+  }
+}
 .runes-item-info {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

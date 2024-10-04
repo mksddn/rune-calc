@@ -294,8 +294,13 @@
 		text-align: center;
 		display: flex;
 		flex-direction: column;
+		br{
+			display: none;
+		}
 		@include sm-down{
-			// margin-bottom: 43px;
+			br{
+				display: block;
+			}
 		}
 		&-info{
 			flex-grow: 1;
