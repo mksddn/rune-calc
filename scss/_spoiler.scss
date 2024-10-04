@@ -1,10 +1,6 @@
 .spoiler{
 	&__intro{
 		text-align: center;
-		margin-bottom: calc(var(--index) * 3.2);
-		@include xl-up{
-			margin-bottom: 70px;
-		}
 	}
 	&__btn{
 		display: inline-flex;
@@ -17,6 +13,7 @@
 		font-weight: 400;
 		font-size: calc(var(--index) * 1.3);
 		gap: calc(var(--index));
+		user-select: none;
 		@include xl-up{
 			font-size: 41px;
 			gap: 22px;
@@ -57,5 +54,9 @@
 	}
 	&.spoiler__active .spoiler__content {
       opacity: 1;
+		margin: calc(var(--index) * 3.2) 0;
+		@include xl-up{
+			margin: 70px 0;
+		}
    }
 }
