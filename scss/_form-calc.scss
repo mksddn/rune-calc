@@ -1,4 +1,4 @@
-.run-calc-section-bg{
+.rune-calc-section-bg{
 	position: absolute;
 	width: 100%;
 	height: auto;
@@ -8,7 +8,7 @@
 	opacity: 0.4;
 }
 
-.run-calc-form{
+.rune-calc-form{
 	border: 1.37207px solid var(--white-color);
 	max-width: 95%;
 	margin: 0 auto calc(var(--index) * 1.3);
@@ -54,7 +54,7 @@
 	}
 }
 
-.run-form-group{
+.rune-form-group{
 	display: flex;
 	flex-direction: column;
 	gap: calc(var(--index) * 1.2);
@@ -68,7 +68,7 @@
 	}
 }
 
-.run-calc-section-with-img{
+.rune-calc-section-with-img{
 	text-align: center;
 	position: relative;
 	transform: translateY(-15%);
@@ -78,7 +78,7 @@
 	}
 }
 
-.run-calc-section-text-block{
+.rune-calc-section-text-block{
 	&.first-text-block{
 		position: absolute;
 		left: 0;
@@ -107,7 +107,7 @@
 	}
 }
 
-.run-calc-section-descr{
+.rune-calc-section-descr{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	margin-top: calc(var(--index) * 5.2);
@@ -201,7 +201,7 @@
 	}
 }
 
-.run-calc-section-descr-title{
+.rune-calc-section-descr-title{
 	display: none;
 	@include md-down{
 		display: block;
@@ -222,7 +222,7 @@
 	}
 }
 
-.run-calc-section-descr-end{
+.rune-calc-section-descr-end{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
