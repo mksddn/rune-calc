@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.querySelector("#runeCalcAbout").style.display = "none";
 	document
 		.querySelector("#runeCalcResult")
-		.scrollIntoView({ behavior: "instant", block: "start" });
+		.scrollIntoView({ behavior: "smooth", block: "start" });
 	});
 
 });
