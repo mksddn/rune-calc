@@ -192,6 +192,7 @@ select{
 }
 
 [type="date"] {
+	appearance: none;
 	background: rgba(238, 238, 238, 0.51) url(../img/icons/date-icon.svg) 97% 50% no-repeat;
 	@include lg-down{
 		background-size: 7%;

@@ -1,3 +1,13 @@
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		src: url($furl) format('woff2');
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: 'swap';
+	}
+}
+
 @mixin sm-down {
 	@media (max-width: 640px) { @content; }
 }
