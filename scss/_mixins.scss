@@ -8,6 +8,9 @@
 	}
 }
 
+@mixin xs-down {
+	@media (max-width: 360px) { @content; }
+}
 @mixin sm-down {
 	@media (max-width: 640px) { @content; }
 }

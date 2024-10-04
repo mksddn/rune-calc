@@ -138,7 +138,7 @@
 			font-size: 14px;
 		}
 		@include sm-down{
-			font-size: 10px;
+			font-size: 12px;
 		}
 		@include md-down{
 			text-align: center;
@@ -171,6 +171,10 @@
 			@include xl-up{
 				font-size: 26px;
 			}
+			@include sm-down{
+				font-size: 13px;
+				margin-bottom: 5px;
+			}
 		}
 		em{
 			position: relative;
@@ -180,6 +184,7 @@
 			@include sm-down{
 				padding-bottom: 5px;
 				margin-bottom: 12px;
+				font-size: 12px;
 			}
 			&::after{
 				content: '';
@@ -228,7 +233,7 @@
 	justify-content: space-between;
 	position: relative;
 	@include md-down{
-		margin: 70px 0 80px;
+		margin: 70px 0 0;
 		img{
 			margin-top: 50px;
 		}
@@ -247,7 +252,7 @@
 			font-size: 14px;
 		}
 		@include sm-down{
-			font-size: 10px;
+			font-size: 12px;
 		}
 		p{
 			&:first-child{
@@ -277,14 +282,18 @@
 			margin: 70px 0 80px;
 		}
 		@include md-down{
-			display: block;
+			// display: block;
 			margin: 45px 0;
+			gap: 10px;
+		}
+		@include sm-down{
+			gap: 10px;
 		}
 	}
 	&-item{
 		text-align: center;
 		@include sm-down{
-			margin-bottom: 43px;
+			// margin-bottom: 43px;
 		}
 		h4{
 			font-weight: 600;
@@ -296,12 +305,19 @@
 				font-size: 40px;
 			}
 			@include sm-down{
-				margin-bottom: 24px;
-				font-size: 14px;
+				min-height: 32px;
+				margin-bottom: 10px;
+				font-size: 13px;
 			}
 		}
 		img{
 			margin-bottom: 21px;
+			@include md-down{
+				margin-bottom: 15px;
+			}
+			@include sm-down{
+				margin-bottom: 5px;
+			}
 		}
 		h5{
 			font-weight: 300;
@@ -312,18 +328,26 @@
 			}
 			@include md-down{
 				font-size: 14px;
+				margin-bottom: 5px;
 			}
 			@include sm-down{
-				margin-bottom: 9px;
+				margin-bottom: 12px;
+			}
+			@include xs-down{
+				font-size: 12px;
+				margin-bottom: 5px;
 			}
 		}
 		small{
 			font-size: 27px;
 			font-weight: 300;
 			@include lg-down{
-				font-size: 14px;
+				font-size: 12px;
 			}
 			@include sm-down{
+				font-size: 12px;
+			}
+			@include xs-down{
 				font-size: 10px;
 			}
 		}

@@ -36,6 +36,9 @@
 			line-height: 1;
 			margin-bottom: calc(var(--index) * 2.75);
 		}
+		@include xs-down{
+			font-size: 30px;
+		}
 	}
 	&-img{
 		margin-bottom: 90px;

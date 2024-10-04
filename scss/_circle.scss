@@ -30,6 +30,9 @@
 		width: fit-content;
 		white-space: nowrap;
 		@include md-down{
+			font-size: 12px;
+		}
+		@include xs-down{
 			font-size: 10px;
 		}
   }
@@ -38,7 +41,10 @@
 		top: 0; /* Отступ от верхней границы */
 		left: -45%;
 		@include sm-down{
-			left: -30%;;
+			left: -45%;
+		}
+		@include xs-down{
+			left: -35%;
 		}
   }
   
@@ -46,7 +52,10 @@
 		right: -50%; /* Отступ от правой границы */
 		top: 25%;
 		@include sm-down{
-			right: -45%;;
+			right: -57%;
+		}
+		@include xs-down{
+			right: -45%;
 		}
   }
   
