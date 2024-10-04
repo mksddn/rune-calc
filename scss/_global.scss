@@ -27,7 +27,7 @@ body{
 	@include xl-up{
 		font-size: 27px;
 	}
-	line-height: auto;
+	line-height: 1.3;
 	font-weight: 300;
 	min-width: 320px;
 	overflow-x: hidden;
@@ -153,6 +153,64 @@ select{
 }
 input{
 	text-transform: uppercase;
+}
+
+select{
+	appearance: none;
+	cursor: pointer;
+	option{
+		color: #000;
+		display: block;
+		padding: 10px;
+	}
+}
+
+.custom-select {
+	position: relative;
+	width: 100%;
+	&::after{
+		content: '';
+		position: absolute;
+		height: calc(var(--index));
+		width: calc(var(--index) * 0.7);
+		background-image: url(../img/icons/arrow-up.svg);
+		background-size: cover;
+		top: 50%;
+		// left: 95%;
+		right: calc(var(--index) * 2.4);
+		transform: translateY(-50%) rotate(-180deg);
+		z-index: 10;
+		@include xl-up{
+			right: 50px;
+			height: 34px;
+			width: 10px;
+		}
+		@include sm-down{
+			right: calc(var(--index) * 1.2);
+		}
+	}
+}
+
+[type="date"] {
+	background: rgba(238, 238, 238, 0.51) url(../img/icons/date-icon.svg) 97% 50% no-repeat;
+	@include lg-down{
+		background-size: 7%;
+	}
+}
+
+[type="date"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
+
+.mobile-element{
+	display: none;
+	@include md-down{
+		display: inline-block;
+	}
 }
 
 .badge{

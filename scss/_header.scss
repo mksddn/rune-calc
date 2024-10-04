@@ -81,4 +81,10 @@
 			font-size: 10px;
 		}
 	}
+	b{
+		font-weight: 300;
+		@include md-down{
+			font-weight: 600;
+		}
+	}
 }
