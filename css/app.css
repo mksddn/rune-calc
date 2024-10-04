@@ -934,6 +934,11 @@ select option {
   border: none;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .rune-video-player button {
+    max-width: 60px;
+  }
+}
 
 .circle {
   position: relative;
