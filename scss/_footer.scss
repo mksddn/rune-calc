@@ -102,8 +102,8 @@
 }
 
 .scroll-top{
-	width: 112px;
-	height: 112px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -114,6 +114,7 @@
 	margin-left: auto;
 	img{
 		transition: all .25s ease-in-out;
+		height: 50%;
 	}
 	&:hover{
 		background-color: var(--white-color);
@@ -124,9 +125,6 @@
 	@include lg-down{
 		width: 44px;
 		height: 44px;
-		img{
-			height: 50%;
-		}
 	}
 	@include md-down{
 		margin-bottom: 30px;

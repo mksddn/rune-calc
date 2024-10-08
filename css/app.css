@@ -1380,8 +1380,8 @@ select option {
 }
 
 .scroll-top {
-  width: 112px;
-  height: 112px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1401,6 +1401,7 @@ select option {
 .scroll-top img {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  height: 50%;
 }
 .scroll-top:hover {
   background-color: var(--white-color);
@@ -1413,9 +1414,6 @@ select option {
   .scroll-top {
     width: 44px;
     height: 44px;
-  }
-  .scroll-top img {
-    height: 50%;
   }
 }
 @media (max-width: 768px) {
