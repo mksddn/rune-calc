@@ -9,8 +9,8 @@
 	height: calc(var(--index) * 14.2);
 	z-index: 100;
 	@include xl-up{
-		width: 383px;
-		height: 383px;
+		width: 250px;
+		height: 250px;
 	}
 	&-wrapper{
 		display: flex;
@@ -29,6 +29,7 @@
 		position: absolute;
 		width: fit-content;
 		white-space: nowrap;
+		font-size: 16px;
 		@include md-down{
 			font-size: 12px;
 		}

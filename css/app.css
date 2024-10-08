@@ -150,14 +150,14 @@ section h2 {
   text-transform: uppercase;
   text-align: center;
   font-weight: normal;
-  font-size: calc(var(--index) * 1.3);
-  margin-bottom: calc(var(--index) * 2.3);
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 80px;
 }
-@media (min-width: 1280px) {
+@media (max-width: 768px) {
   section h2 {
-    font-size: 41px;
-    line-height: 50px;
-    margin-bottom: 128px;
+    font-size: 20px;
+    margin-bottom: 25px;
   }
 }
 @media (max-width: 640px) {
@@ -595,6 +595,15 @@ select option {
     margin-top: 17%;
   }
 }
+.rune-calc-section-with-img-bg {
+  max-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .rune-calc-section-with-img-bg {
+    max-width: 60%;
+  }
+}
 
 .rune-calc-section-text-block.first-text-block {
   position: absolute;
@@ -786,6 +795,14 @@ select option {
           justify-content: space-between;
   position: relative;
 }
+.rune-calc-section-descr-end img {
+  max-width: 40%;
+}
+@media (max-width: 1024px) {
+  .rune-calc-section-descr-end img {
+    max-width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .rune-calc-section-descr-end {
     margin: 70px 0 0;
@@ -876,7 +893,7 @@ select option {
 .runes-item br {
   display: none;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .runes-item br {
     display: block;
   }
@@ -899,13 +916,18 @@ select option {
 .runes-item h4 {
   font-weight: 600;
   text-transform: uppercase;
-  font-size: calc(var(--index) * 1.3);
+  font-size: 32px;
   line-height: 1.2;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
   .runes-item h4 {
-    font-size: 40px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .runes-item h4 {
+    font-size: 20px;
   }
 }
 @media (max-width: 640px) {
@@ -930,12 +952,12 @@ select option {
 }
 .runes-item h5 {
   font-weight: 300;
-  margin-bottom: 15px;
-  font-size: calc(var(--index) * 1.3);
+  margin-bottom: 10px;
+  font-size: 28px;
 }
-@media (min-width: 1280px) {
+@media (max-width: 1024px) {
   .runes-item h5 {
-    font-size: 48px;
+    font-size: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -956,7 +978,6 @@ select option {
   }
 }
 .runes-item small {
-  font-size: 27px;
   font-weight: 300;
 }
 @media (max-width: 1024px) {
@@ -1031,8 +1052,8 @@ select option {
 }
 @media (min-width: 1280px) {
   .circle {
-    width: 383px;
-    height: 383px;
+    width: 250px;
+    height: 250px;
   }
 }
 .circle-wrapper {
@@ -1058,6 +1079,7 @@ select option {
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
+  font-size: 16px;
 }
 @media (max-width: 768px) {
   .circle .label {

@@ -87,12 +87,12 @@ section{
 		text-transform: uppercase;
 		text-align: center;
 		font-weight: normal;
-		font-size: calc(var(--index) * 1.3);
-		margin-bottom: calc(var(--index) * 2.3);
-		@include xl-up{
-			font-size: 41px;
-			line-height: 50px;
-			margin-bottom: 128px;
+		font-size: 40px;
+		line-height: 1.2;
+		margin-bottom: 80px;
+		@include md-down{
+			font-size: 20px;
+			margin-bottom: 25px;
 		}
 		@include sm-down{
 			font-size: 14px;
