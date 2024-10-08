@@ -76,7 +76,12 @@ body {
 }
 @media (min-width: 1280px) {
   body {
-    font-size: 27px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 1280px) {
+  body {
+    font-size: 16px;
   }
 }
 @media (max-width: 640px) {
@@ -88,11 +93,11 @@ body p {
   text-align: justify;
 }
 body p:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 @media (max-width: 640px) {
   body p:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 
@@ -359,72 +364,61 @@ select option {
 }
 
 .rune-header {
-  padding: calc(var(--index) * 2.2) 0;
-}
-@media (min-width: 1280px) {
-  .rune-header {
-    padding: 60px 0 40px 0;
-  }
+  padding: 40px 0 40px 0;
 }
 .rune-header .badge {
-  margin-bottom: calc(var(--index) * 2);
+  margin-bottom: 30px;
 }
-@media (min-width: 1280px) {
+@media (max-width: 640px) {
   .rune-header .badge {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .rune-header {
+    padding: 30px 0 0px;
   }
 }
 .rune-header h1 {
-  font-size: 92px;
+  font-size: 80px;
   text-transform: uppercase;
-  line-height: 80px;
+  line-height: 1;
   font-family: var(--heading-font-family), sans-serif;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   display: block;
 }
 .rune-header h1 > span {
   display: block;
-  font-size: 80px;
+  font-size: 70px;
 }
 @media (max-width: 1280px) {
   .rune-header h1 > span {
     font-size: inherit;
   }
 }
-@media (max-width: 640px) {
-  .rune-header h1 > span {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  .rune-header h1 > span span {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-  }
-}
 @media (max-width: 1280px) {
   .rune-header h1 {
-    font-size: calc(var(--index) * 3.62);
-    line-height: 1;
-    margin-bottom: calc(var(--index) * 2.75);
+    font-size: 60px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 1024px) {
+  .rune-header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 640px) {
   .rune-header h1 {
     font-size: 30px;
   }
 }
 .rune-header-img {
-  margin-bottom: 90px;
+  margin-bottom: 40px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   .rune-header-img {
-    margin-bottom: calc(var(--index) * 5);
+    margin-bottom: 20px;
   }
 }
 .rune-header-img img {
@@ -434,7 +428,7 @@ select option {
 .rune-header-btn {
   position: absolute;
   right: 0;
-  bottom: -50px;
+  bottom: -20px;
   border: none;
   outline: none;
   color: var(--white-color);
@@ -442,6 +436,7 @@ select option {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.02em;
+  font-size: 16px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -451,8 +446,8 @@ select option {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 282px;
-  height: 282px;
+  width: 180px;
+  height: 180px;
   border-radius: 100%;
   background-color: rgba(255, 255, 255, 0.27);
   -webkit-backdrop-filter: blur(16.85px);
@@ -465,13 +460,24 @@ select option {
 }
 @media (max-width: 1280px) {
   .rune-header-btn {
-    width: calc(var(--index) * 8.1);
-    height: calc(var(--index) * 8.1);
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 1024px) {
+  .rune-header-btn {
+    width: 120px;
+    height: 120px;
+    font-size: 12px;
   }
 }
 @media (max-width: 768px) {
   .rune-header-btn {
-    font-size: 10px;
+    width: 70px;
+    height: 70px;
+    font-size: 8px;
+    right: 10px;
+    bottom: 10px;
   }
 }
 .rune-header b {
