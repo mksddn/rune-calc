@@ -1225,6 +1225,7 @@ select option {
 }
 
 .rune-footer {
+  border-top: 1px solid var(--gray-color);
   padding: 60px 0;
   font-size: 20px;
   position: relative;
