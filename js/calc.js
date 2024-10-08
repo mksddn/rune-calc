@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		{
 			group: 9,
 			atts: [
-				{ rus: "Пустая руна<br>Вирд", eng: "Wyrd", img: "/img/runes/empty.png" },
-				{ rus: "Пустая руна<br>Вирд", eng: "Wyrd", img: "/img/runes/empty.png" },
-				{ rus: "Пустая руна<br>Вирд", eng: "Wyrd", img: "/img/runes/empty.png" }
+				{ rus: "Пустая руна<br style='display: block;'>Вирд", eng: "Wyrd", img: "/img/runes/empty.png" },
+				{ rus: "Пустая руна<br style='display: block;'>Вирд", eng: "Wyrd", img: "/img/runes/empty.png" },
+				{ rus: "Пустая руна<br style='display: block;'>Вирд", eng: "Wyrd", img: "/img/runes/empty.png" }
 			]
 		}
 	];
@@ -287,13 +287,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	document.querySelector(
 		"#essenceRune"
-	).innerHTML = `<img src="${ORIGIN_URL+essenceRune.rune.img}" alt="${essenceRune.rune.rus}"><div><h5><em>${essenceRune.rune.rus} (${essenceRune.rune.eng})</em></h5><small>Руническая группа: ${essenceRune.group}<br>Атт: ${essenceRune.att}</small></div>`;
+	).innerHTML = `<img src="${ORIGIN_URL+essenceRune.rune.img}" alt="${essenceRune.rune.rus}"><div><h5><em>${essenceRune.rune.rus} (${essenceRune.rune.eng})</em></h5><small>Руническая группа: ${essenceRune.group}<br style="display: block;">Атт: ${essenceRune.att}</small></div>`;
 	document.querySelector(
 		"#personalityRune"
-	).innerHTML = `<img src="${ORIGIN_URL+personalityRune.rune.img}" alt="${personalityRune.rune.rus}"><div><h5><em>${personalityRune.rune.rus} (${personalityRune.rune.eng})</em></h5><small>Руническая группа: ${personalityRune.group}<br>Атт: ${personalityRune.att}</small></div>`;
+	).innerHTML = `<img src="${ORIGIN_URL+personalityRune.rune.img}" alt="${personalityRune.rune.rus}"><div><h5><em>${personalityRune.rune.rus} (${personalityRune.rune.eng})</em></h5><small>Руническая группа: ${personalityRune.group}<br style="display: block;">Атт: ${personalityRune.att}</small></div>`;
 	document.querySelector(
 		"#goldenRune"
-	).innerHTML = `<img src="${ORIGIN_URL+goldenRune.rune.img}" alt="${goldenRune.rune.rus}"><div><h5><em>${goldenRune.rune.rus} (${goldenRune.rune.eng})</em></h5><small>Руническая группа: ${goldenRune.group}<br>Атт: ${goldenRune.att}</small></div>`;
+	).innerHTML = `<img src="${ORIGIN_URL+goldenRune.rune.img}" alt="${goldenRune.rune.rus}"><div><h5><em>${goldenRune.rune.rus} (${goldenRune.rune.eng})</em></h5><small>Руническая группа: ${goldenRune.group}<br style="display: block;">Атт: ${goldenRune.att}</small></div>`;
 	document.querySelector("#runeCalcResult").style.display = "block";
 	document.querySelector("#runeCalcAbout").style.display = "none";
 	document
