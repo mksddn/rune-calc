@@ -114,19 +114,18 @@ section{
 	letter-spacing: 0.02em;
 	background-color: var(--gray-color);
 	color: var(--white-color);
-	border-radius: 4.1162px;
 	cursor: pointer;
 	border: none;
-	border-radius: 4.1162px;
+	border-radius: 4px;
 	transition: all .25s ease-in-out;
 	&:hover{
 		background-color: var(--accent-color);
 	}
-	font-size: calc(var(--index));
-	padding: calc(var(--index) * 1.2);
+	// font-size: calc(var(--index));
+	padding: 20px;
 	@include xl-up{
-		padding: 36px 40px;
-		font-size: 27px;
+		// padding: 36px 40px;
+		// font-size: 27px;
 	}
 	@include sm-down{
 		font-size: 12px;
@@ -139,19 +138,15 @@ select{
 	font-weight: 400;
 	letter-spacing: 0.02em;
 	background: rgba(238, 238, 238, 0.51);
-	border-radius: 4.1162px;
+	border-radius: 4px;
 	border: none;
-	padding: calc(var(--index) * 1.1) calc(var(--index));
-	font-size: calc(var(--index));
+	padding: 20px;
 	&::placeholder{
 		color: var(--white-color);
 	}
-	@include xl-up{
-		font-size: 24px;
-		padding: 36px 40px;
-	}
+	font-family: inherit;
 	@include sm-down{
-		font-size: 10px;
+		padding: 15px;
 	}
 }
 input{
@@ -174,31 +169,29 @@ select{
 	&::after{
 		content: '';
 		position: absolute;
-		height: calc(var(--index));
-		width: calc(var(--index) * 0.7);
+		height: 25px;
+		width: 10px;
 		background-image: url(../img/icons/arrow-up.svg);
 		background-size: cover;
 		top: 50%;
-		// left: 95%;
-		right: calc(var(--index) * 2.4);
+		right: 20px;
 		transform: translateY(-50%) rotate(-180deg);
 		z-index: 10;
-		@include xl-up{
-			right: 50px;
-			height: 34px;
-			width: 10px;
-		}
 		@include sm-down{
-			right: calc(var(--index) * 1.2);
+			width: 6px;
+			height: 20px;
+			right: 15px;
 		}
 	}
 }
 
 [type="date"] {
+	padding: 17.5px 20px;
 	appearance: none;
 	background: rgba(238, 238, 238, 0.51) url(../img/icons/date-icon.svg) 97% 50% no-repeat;
-	@include lg-down{
-		background-size: 7%;
+	background-size: 5%;
+	@include sm-down{
+		padding: 14px 15px;
 	}
 }
 

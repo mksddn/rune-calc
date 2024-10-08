@@ -186,23 +186,15 @@ section h2 > span {
   letter-spacing: 0.02em;
   background-color: var(--gray-color);
   color: var(--white-color);
-  border-radius: 4.1162px;
   cursor: pointer;
   border: none;
-  border-radius: 4.1162px;
+  border-radius: 4px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  font-size: calc(var(--index));
-  padding: calc(var(--index) * 1.2);
+  padding: 20px;
 }
 .btn:hover {
   background-color: var(--accent-color);
-}
-@media (min-width: 1280px) {
-  .btn {
-    padding: 36px 40px;
-    font-size: 27px;
-  }
 }
 @media (max-width: 640px) {
   .btn {
@@ -216,10 +208,10 @@ select {
   font-weight: 400;
   letter-spacing: 0.02em;
   background: rgba(238, 238, 238, 0.51);
-  border-radius: 4.1162px;
+  border-radius: 4px;
   border: none;
-  padding: calc(var(--index) * 1.1) calc(var(--index));
-  font-size: calc(var(--index));
+  padding: 20px;
+  font-family: inherit;
 }
 input::-webkit-input-placeholder, select::-webkit-input-placeholder {
   color: var(--white-color);
@@ -237,17 +229,10 @@ input::placeholder,
 select::placeholder {
   color: var(--white-color);
 }
-@media (min-width: 1280px) {
-  input,
-  select {
-    font-size: 24px;
-    padding: 36px 40px;
-  }
-}
 @media (max-width: 640px) {
   input,
   select {
-    font-size: 10px;
+    padding: 15px;
   }
 }
 
@@ -274,38 +259,35 @@ select option {
 .custom-select::after {
   content: "";
   position: absolute;
-  height: calc(var(--index));
-  width: calc(var(--index) * 0.7);
+  height: 25px;
+  width: 10px;
   background-image: url(../img/icons/arrow-up.svg);
   background-size: cover;
   top: 50%;
-  right: calc(var(--index) * 2.4);
+  right: 20px;
   -webkit-transform: translateY(-50%) rotate(-180deg);
           transform: translateY(-50%) rotate(-180deg);
   z-index: 10;
 }
-@media (min-width: 1280px) {
-  .custom-select::after {
-    right: 50px;
-    height: 34px;
-    width: 10px;
-  }
-}
 @media (max-width: 640px) {
   .custom-select::after {
-    right: calc(var(--index) * 1.2);
+    width: 6px;
+    height: 20px;
+    right: 15px;
   }
 }
 
 [type=date] {
+  padding: 17.5px 20px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background: rgba(238, 238, 238, 0.51) url(../img/icons/date-icon.svg) 97% 50% no-repeat;
+  background-size: 5%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 640px) {
   [type=date] {
-    background-size: 7%;
+    padding: 14px 15px;
   }
 }
 
@@ -364,7 +346,7 @@ select option {
 }
 
 .rune-header {
-  padding: 40px 0 40px 0;
+  padding: 40px 0 0;
 }
 .rune-header .badge {
   margin-bottom: 30px;
@@ -500,31 +482,36 @@ select option {
 }
 
 .rune-calc-form {
-  border: 1.37207px solid var(--white-color);
-  max-width: 95%;
-  margin: 0 auto calc(var(--index) * 1.3);
+  border: 1px solid var(--white-color);
+  margin-bottom: 60px;
   border-radius: 4.1162px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background: rgba(252, 252, 252, 0.03);
-  padding: calc(var(--index) * 2.7) calc(var(--index) * 1.8);
-  gap: calc(var(--index) * 1.35);
+  padding: 40px;
+  gap: 25px;
 }
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
   .rune-calc-form {
-    gap: 27px;
-    padding: 60px 90px;
-    margin-bottom: 80px;
+    padding: 20px;
+    gap: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .rune-calc-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media (max-width: 768px) {
   .rune-calc-form {
     max-width: 100%;
+    gap: 15px;
   }
 }
 @media (max-width: 640px) {
@@ -536,20 +523,22 @@ select option {
   width: 100%;
 }
 .rune-calc-form .btn {
-  margin-top: calc(var(--index) * 2.2);
+  height: 55px;
+  margin-top: auto;
 }
-@media (min-width: 1280px) {
+@media (max-width: 1024px) {
   .rune-calc-form .btn {
-    margin-top: 60px;
+    margin-top: 10px;
   }
 }
 .rune-calc-form .agree {
   font-weight: 300;
-  font-size: calc(var(--index) * 0.85);
+  font-size: 14px;
+  grid-column: span 2;
 }
-@media (min-width: 1280px) {
+@media (max-width: 640px) {
   .rune-calc-form .agree {
-    font-size: 20px;
+    font-size: 12px;
   }
 }
 .rune-calc-form .agree a {
@@ -569,17 +558,28 @@ select option {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: calc(var(--index) * 1.2);
+  gap: 15px;
 }
-@media (min-width: 1280px) {
+@media (max-width: 1024px) {
   .rune-form-group {
-    gap: 25px;
+    gap: 10px;
   }
 }
 .rune-form-group label {
   text-transform: uppercase;
   font-family: var(--heading-font-family), sans-serif;
   line-height: 1;
+  font-size: 16px;
+}
+@media (max-width: 1024px) {
+  .rune-form-group label {
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .rune-form-group label {
+    font-size: 12px;
+  }
 }
 
 .rune-calc-section-with-img {
